@@ -1,0 +1,68 @@
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>SCMS PROJECT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+        </head>
+<body bgcolor="white">
+
+<h2 align="center">Student Course Management System</h2>
+<style>
+        .container {
+            position: relative;
+            text-align: center;
+            color: black;
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 22px;
+        }
+    </style>
+<nav class="navbar">
+
+    <div class="logo">KL UNIVERSITY</div>
+
+    <ul class="nav-links">
+
+        <div class="menu">
+
+<li> <a href="{% url 'home' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li> <a href="{% url 'about' %}">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </li>
+<li class="services">
+    <a href="#">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <ul class="dropdown">
+        <li><a href="{% url 'studentlogin' %}">Student</a></li>
+        <li><a href="{% url 'facultylogin' %}">Faculty</a></li>
+        <li><a href="{% url 'login' %}">Admin</a></li>
+    </ul>
+</li>
+
+<li> <a href="{% url 'contact' %}">Contact Us</a></li>
+        </div>
+
+    </ul>
+</nav>
+
+<div class="container">
+        <img src="static/images/sdp1.jpg" alt="Your Image" width="1500" height="550">
+    <div class="text"><center><h2><p><font color="#006064">About Us</font></p></h2></center><br>The Koneru Lakshmaiah Charities was established as a trust in the year 1980 with its official address at Museum road, Governorpet, Vijayawada, Andhra Pradesh 520 002 and started KL College of Engineering in the Academic year 1980-81.<br>
+KL Deemed to be University was established in 1980-81, as KL College of Engineering, which was upgraded to KL College of Engineering Autonomous in 2006 by UGC, and was declared as a Deemed to be University in 2009 by UGC, MHRD Govt.of India. In 2012 as a Deemed to be University the institution was accredited by NAAC with A Grade and later in 2018, was re-accredited by NAAC with A++ grade. In 2019 UGC, MHRD declared this institution as Category I Institution.<br>
+</div>
+    </div>
+{% block 'body' %}
+
+<body>
+<br>
+
+
+
+{% endblock %}
+
+</body>
+</html>

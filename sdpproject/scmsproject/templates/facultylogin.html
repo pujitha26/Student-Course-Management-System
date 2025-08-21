@@ -1,0 +1,89 @@
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCMS PROJECT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+</head>
+<body bgcolor="white">
+
+<h2 align="center">Student Course Management System</h2><br>
+
+<nav class="navbar">
+
+    <div class="logo">KL UNIVERSITY</div>
+
+    <ul class="nav-links">
+
+        <div class="menu">
+
+<li> <a href="{% url 'home' %}">Home</a>&nbsp;&nbsp;&nbsp; </li>
+<li> <a href="{% url 'about' %}">About Us</a>&nbsp;&nbsp;&nbsp; </li>
+<li class="services">
+    <a href="#">Login</a>&nbsp;&nbsp;&nbsp;
+    <ul class="dropdown">
+        <li><a href="{% url 'studentlogin' %}">Student</a></li>
+        <li><a href="{% url 'facultylogin' %}">Faculty</a></li>
+        <li><a href="{% url 'login' %}">Admin</a></li>
+    </ul>
+</li>
+
+<li> <a href="{% url 'contact' %}">Contact Us</a></li>
+        </div>
+
+    </ul>
+</nav>
+
+<br><br>
+
+{% block 'body' %}
+
+
+<h2 align="center" style="color:red">{{message}}</h2>
+
+<h3 align="center"><u>Faculty login</u></h3>
+
+<br>
+
+<center>
+<div class="login-box">
+<form method="post" action="{% url 'checkfacultylogin' %}">
+
+    {% csrf_token %}
+    <table align="center" width="25%" height="25%">
+
+        <tr>
+            <td><label>Enter Faculty ID</label></td>
+            <td><input type="number" name="fid" required/></td>
+        </tr>
+
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td><label>Enter password</label></td>
+            <td><input type="password" name="pwd" required/></td>
+
+            <tr align="center">
+                <td>
+                    <input type="submit" value="Login" class="button"/>
+                </td>
+                <td>
+                    <input type="reset" value="clear" class="button"/>
+                </td>
+            </tr>
+        </tr>
+
+    </table>
+
+</form>
+</div>
+</center>
+{% endblock %}

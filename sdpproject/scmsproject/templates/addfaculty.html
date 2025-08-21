@@ -1,0 +1,105 @@
+{% extends 'adminhome.html' %}
+
+{% block 'body' %}
+  <center>
+<h2 align="center" style="color:red">{{msg}}</h2>
+
+<h3 align="center"><u>Add Faculty</u></h3>
+
+<br>
+
+<form method="post" action="{% url 'insertfaculty' %}">
+{% csrf_token %}
+
+    <table align="center" width="40%" height="50%">
+        <tr align="left">
+            <td><label>Enter Faculty ID</label></td>
+            <td>
+                <input type="number" name="facid" required>
+            </td>
+        </tr>
+
+        <tr align="left">
+        <td><label>Enter Fullname</label></td>
+            <td>
+                <input type="text" name="fullname" required>
+            </td>
+        </tr>
+
+        <tr align="left">
+            <td><label>Gender</label></td>
+            <td>
+                <select name="gender" required>
+                    <option value="">--Select--</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr align="left">
+            <td><label>Select Department</label></td>
+            <td>
+                <select name="dept" required>
+                    <option value="">--Select--</option>
+                    <option value="CSE(H)">CSE(Honors)</option>
+                    <option value="CSE(R)">CSE(Regular)</option>
+                    <option value="CSIT">CS&IT</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr align="left">
+            <td><label>Select Qualification</label></td>
+            <td>
+                <select name="qua" required>
+                    <option value="">--Select--</option>
+                    <option value="M.Tech.">M.Tech.</option>
+                    <option value="Ph.D.">Ph.D.</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr align="left">
+            <td><label>Select Designation</label></td>
+            <td>
+                <select name="degn" required>
+                    <option value="">--Select--</option>
+                    <option value="Prof.">Professor</option>
+                    <option value="Assoc.Prof.">Associate Professor</option>
+                    <option value="Asst.Prof.">Assistant Professor</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr align="left">
+            <td><label>Enter password</label></td>
+            <td>
+                <input type="password" name="pwd" required/>
+            </td>
+        </tr>
+
+        <tr align="left">
+            <td><label>Enter Email</label></td>
+            <td>
+                <input type="text" name="email" required/>
+            </td>
+        </tr>
+
+        <tr align="left">
+            <td><label>Enter Contact</label></td>
+            <td>
+                <input type="number" name="contact" required>
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td><input type="submit" value="Add" class="addbutton"></td>
+            <td><input type="reset" value="Clear" class="addbutton"></td>
+        </tr>
+    </table>
+        </center>
+</form>
+
+{% endblock%}

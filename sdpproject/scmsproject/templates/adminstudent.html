@@ -1,0 +1,41 @@
+{% extends 'adminhome.html' %}
+<style>
+        .container {
+            position: relative;
+            text-align: left;
+            color: black;
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 22px;
+        }
+    </style>
+<div class="container">
+        <img src="static/images/sdp1.jpg" alt="Your Image" width="1500" height="550">
+{% block 'body' %}
+
+<center>
+
+<button class="button">
+    <a href="{% url 'addstudent1' %}" style="color:white">Add Student</a>
+</button>
+
+    <button class="button">
+    <a href="{% url 'viewstudents' %}" style="color:white">View All Students</a>
+</button>
+
+    <button class="button">
+    <a href="#" style="color:white">Update Student</a>
+</button>
+
+    <button class="button">
+    <a href="{% url 'deletestudent' %}" style="color:white">Delete Student</a>
+</button>
+
+</center>
+{% endblock%}
+     </div>

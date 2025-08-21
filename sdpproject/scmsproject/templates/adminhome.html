@@ -1,0 +1,46 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCMS PROJECT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styleadmin.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body bgcolor="white">
+
+<h2 align="center">Student Course Management System</h2>
+<br>
+<nav class="navbar">
+
+    <div class="logo">KL UNIVERSITY</div>
+
+    <ul class="nav-links">
+
+        <div class="menu">
+
+<li> <a href="{% url 'adminhome' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li><a href="{% url 'adminchangepwd' %}">Change Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li><a href="{% url 'adminstudent' %}">Student</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li><a href="{% url 'adminfaculty' %}">Faculty</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li><a href="{% url 'facultycoursemapping' %}">Faculty Course Mapping</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li><a href="{% url 'admincourse' %}">Course</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li><a href="{% url 'login' %}">Logout</a></li>
+
+        </div>
+
+    </ul>
+</nav>
+<h3 align="right" style="color:green"><i>Welcome {{adminuname}}</i></h3>
+
+
+{% block 'body' %}
+
+<center><img align="center" src="/static/images/sdp4.jpg" alt="flight and earth" width="1500" height="550"></center>
+
+{% endblock%}
+
+</body>
+</html>

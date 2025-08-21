@@ -1,0 +1,45 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCMS PROJECT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/stylefaculty.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+<body bgcolor="white">
+
+<h2 align="center">Student Course Management System</h2>
+<br>
+<nav class="navbar">
+
+    <div class="logo">KL UNIVERSITY</div>
+
+    <ul class="nav-links">
+
+        <div class="menu">
+
+<li> <a href="{% url 'facultyhome' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li> <a href="{% url 'facultychangepwd' %}">Change Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li> <a href="{% url 'facultycourses' %}">My Courses</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li> <a href="#">Course Content</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li> <a href="{% url 'facultylogin' %}">Logout</a></li>
+
+
+        </div>
+
+    </ul>
+</nav>
+
+<h3 align="right" style="color:#00897b"><i>Welcome {{fid}}</i></h3>
+{% block 'body' %}
+
+<center><img align="center" src="/static/images/sdp3.jpg" alt="flight and earth" width="1500" height="550"></center>
+
+{% endblock%}
+
+</body>
+</html>

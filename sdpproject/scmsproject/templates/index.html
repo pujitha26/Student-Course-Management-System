@@ -1,0 +1,47 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCMS PROJECT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+    </head>
+<body bgcolor="white">
+
+<h2 align="center">Student Course Management System</h2>
+
+<nav class="navbar">
+
+    <div class="logo">KL UNIVERSITY</div>
+
+    <ul class="nav-links">
+
+        <div class="menu">
+
+<li> <a href="{% url 'home' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li> <a href="{% url 'about' %}">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li class="services">
+    <a href="#">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <ul class="dropdown">
+        <li><a href="{% url 'studentlogin' %}">Student</a></li>
+        <li><a href="{% url 'facultylogin' %}">Faculty</a></li>
+        <li><a href="{% url 'login' %}">Admin</a></li>
+    </ul>
+</li>
+
+<li> <a href="{% url 'contact' %}">Contact Us</a></li>
+        </div>
+
+    </ul>
+</nav>
+
+
+
+{% block 'body' %}
+
+<center><img align="center" src="/static/images/sdp.jpg" alt="flight and earth" width="1500" height="550"></center>
+
+{% endblock %}
+
+</body>
+</html>
