@@ -1,4 +1,3 @@
-# Student-Course-Management-System
 # Student Course Management System
 
 A **Python Full Stack** project for managing students, courses, and enrollments.  
